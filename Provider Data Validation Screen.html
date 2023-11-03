@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Provider Data Validation</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+.validation-screen {
+    background: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #1e93d1;
+}
+
+.provider-info p {
+    margin: 10px 0;
+}
+
+.provider-info p strong {
+    color: #1e93d1;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.accept {
+    background: #1e93d1;
+    color: #fff;
+}
+
+.reject {
+    background: #f44336;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Get the "Accept" and "Reject" buttons
+    const acceptButton = document.querySelector(".accept");
+    const rejectButton = document.querySelector(".reject");
+
+    // Add click event listeners to the buttons
+    acceptButton.addEventListener("click", function() {
+        // Display a prompt for successful acceptance
+        alert("Successfully Accepted");
+    });
+
+    rejectButton.addEventListener("click", function() {
+        // Display a prompt for successful rejection
+        alert("Successfully Rejected");
+    });
+});
+
+    </script>
+</head>
+<body>
+    <div class="validation-screen">
+        <h1>Provider Data Validation</h1>
+        <div class="provider-info">
+            <p><strong>Provider NPI:</strong> 1234567890</p>
+            <p><strong>Provider Name:</strong> John Doe</p>
+            <p><strong>Provider Specialty:</strong> Primary Care</p>
+            <p><strong>Provider Address:</strong> 123 Main Street, Anytown, CA 91234</p>
+            <p><strong>Provider Phone Number:</strong> (123) 456-7890</p>
+            <p><strong>Error:</strong> Address is incorrect</p>
+        </div>
+        <div class="actions">
+            <button class="accept">Accept</button>
+            <button class="reject">Reject</button>
+        </div>
+    </div>
+</body>
+</html>
